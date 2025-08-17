@@ -1,0 +1,12 @@
+Create a frontend developer portfolio website using react and shadcn.
+
+- create a professional website for me based on the attached resume
+- the website should be modern and very professional
+- add nice animation with good background and gradient
+- it should look like a website created by a top front end developer
+- while creating this project follow following steps
+  -- create a vite - react js shadcn project
+  -- make sure the logic and view is seperate
+  -- add logic of each component in a seperate hook
+  -- follow best coding standards
+  -- make a standard project setup
