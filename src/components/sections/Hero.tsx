@@ -5,9 +5,9 @@ import {
   Linkedin,
   Mail,
   ExternalLink,
+  Code2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useScrollTo } from "@/hooks/useScrollTo";
 import { personalInfo } from "@/data/portfolio";
 
@@ -74,20 +74,30 @@ export const Hero = () => {
           className="space-y-10 max-w-5xl mx-auto"
         >
           <motion.div variants={itemVariants} className="flex justify-center">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-gradient-primary blur-xl opacity-30" />
-              <Avatar className="w-36 h-36 ring-4 ring-white/60 dark:ring-white/10 shadow-elevate gradient-border">
-                <AvatarImage
-                  src={personalInfo.avatar}
-                  alt={personalInfo.name}
+            <div className="dev-logo group">
+              <div className="dev-logo-core">
+                <motion.div
+                  className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 opacity-30 blur-xl"
+                  animate={{ rotate: 360 }}
+                  transition={{
+                    duration: 28,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
                 />
-                <AvatarFallback className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 text-white">
-                  {personalInfo.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </AvatarFallback>
-              </Avatar>
+                <motion.div
+                  className="absolute inset-0 rounded-full bg-gradient-to-br from-pink-500/20 via-transparent to-indigo-500/25"
+                  animate={{ rotate: -360 }}
+                  transition={{
+                    duration: 50,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                />
+                <div className="relative z-10 flex items-center justify-center w-full h-full">
+                  <Code2 className="w-16 h-16 text-white drop-shadow-[0_4px_12px_rgba(99,102,241,0.55)]" />
+                </div>
+              </div>
             </div>
           </motion.div>
           <motion.div variants={itemVariants} className="space-y-6">
@@ -108,61 +118,55 @@ export const Hero = () => {
           </motion.p>
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap justify-center gap-5"
+            className="flex justify-center gap-[1rem] my-[1rem]"
           >
             <Button
               onClick={() => scrollToSection("contact")}
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              className="cta-btn cta-primary min-w-[170px]"
             >
-              <Mail className="mr-2 h-5 w-5" />
+              <Mail className="h-5 w-5" />
               Get In Touch
             </Button>
             <Button
               onClick={() => scrollToSection("projects")}
-              variant="outline"
-              size="lg"
-              className="px-8 py-6 text-lg font-semibold rounded-full border-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
+              variant="ghost"
+              className="cta-btn cta-secondary min-w-[170px]"
             >
-              View My Work
-              <ExternalLink className="ml-2 h-5 w-5" />
+              View My Work <ExternalLink className="h-5 w-5" />
             </Button>
           </motion.div>
-          <motion.div
-            variants={itemVariants}
-            className="flex justify-center gap-6"
-          >
+          <motion.div variants={itemVariants} className="social-icons">
             {personalInfo.contact.github && (
               <motion.a
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.94 }}
                 href={personalInfo.contact.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="social-icon"
               >
-                <Github className="h-6 w-6 text-gray-700 dark:text-gray-300" />
+                <Github />
               </motion.a>
             )}
             {personalInfo.contact.linkedin && (
               <motion.a
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.94 }}
                 href={personalInfo.contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="social-icon"
               >
-                <Linkedin className="h-6 w-6 text-blue-600" />
+                <Linkedin />
               </motion.a>
             )}
             <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.94 }}
               href={`mailto:${personalInfo.contact.email}`}
-              className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="social-icon"
             >
-              <Mail className="h-6 w-6 text-green-600" />
+              <Mail />
             </motion.a>
           </motion.div>
           <motion.div variants={itemVariants} className="pt-2">
