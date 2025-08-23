@@ -1,0 +1,13 @@
+Now lets work on Experience section of the page, Follow the instructions below synchronously.
+
+- create a ExperienceTab components in src/components/common directory
+- create nice looking card with nice gradient background like the one which is in the "View my work" button
+- in this component take logo, company name, company description, duration of employment as props
+- arrange the logo circularly
+- add nice looking heading and a gradient to company name (the grandient should follow the project theme)
+- add nice transition to the card, apon clicking on this component the whole description should appear
+- design a good looking paragraph with nice transparent background aligning to the project theme
+- add a nice transition and animation to this component
+- use this component in the experience section of the website
+- and add three dummy experiences to see the components behaviour
+- use best coding practices and keep the view and logic separate for this component

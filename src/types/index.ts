@@ -7,6 +7,7 @@ export interface Experience {
   endDate: string | 'Present';
   description: string[];
   technologies: string[];
+  logo?: string;
 }
 
 export interface Project {
