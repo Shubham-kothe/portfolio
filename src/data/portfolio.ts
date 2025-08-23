@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
   {
     id: "1",
     title: "Senior Frontend Developer",
-    company: "Tech Innovations Inc.",
+    company: "Innovate Inc.",
     location: "Mumbai, India",
     startDate: "2022-01",
     endDate: "Present",
@@ -29,12 +29,13 @@ export const experiences: Experience[] = [
       "Improved application performance by 40% through code optimization and lazy loading",
       "Collaborated with backend teams to integrate RESTful APIs and GraphQL endpoints"
     ],
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Next.js", "GraphQL"]
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Next.js", "GraphQL"],
+    logo: "/logos/innovate-inc.png"
   },
   {
     id: "2",
     title: "Frontend Developer",
-    company: "Digital Solutions Ltd.",
+    company: "Solutions Ltd.",
     location: "Pune, India",
     startDate: "2020-06",
     endDate: "2021-12",
@@ -44,7 +45,24 @@ export const experiences: Experience[] = [
       "Worked closely with designers to create pixel-perfect user interfaces",
       "Participated in code reviews and mentored junior developers"
     ],
-    technologies: ["React", "JavaScript", "CSS3", "HTML5", "Redux"]
+    technologies: ["React", "JavaScript", "CSS3", "HTML5", "Redux"],
+    logo: "/logos/solutions-ltd.png"
+  },
+  {
+    id: "3",
+    title: "UI/UX Designer",
+    company: "Creative Minds",
+    location: "Bengaluru, India",
+    startDate: "2019-01",
+    endDate: "2020-05",
+    description: [
+      "Designed user-centric interfaces for web and mobile applications",
+      "Created wireframes, mockups, and prototypes for new features",
+      "Conducted user research and usability testing to gather feedback",
+      "Collaborated with developers to ensure design consistency"
+    ],
+    technologies: ["Figma", "Sketch", "Adobe XD", "Illustrator", "Photoshop"],
+    logo: "/logos/creative-minds.png"
   }
 ];
 
